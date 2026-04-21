@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Paul Properties</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:radial-gradient(circle at top,#0f0f0f,#050505);
+  color:#eee;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 60px;
+  position:sticky;
+  top:0;
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+nav h2{
+  color:#d4af37;
+  font-family:'Playfair Display',serif;
+  letter-spacing:1px;
+}
+
+nav a{
+  color:#ccc;
+  margin-left:20px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#d4af37;
+}
+
+/* HERO */
+.hero{
+  height:90vh;
+  display:flex;
+  align-items:center;
+  padding:0 60px;
+  background:
+  linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
+  url('images/collage.jpg');
+  background-size:cover;
+  background-position:center;
+}
+
+.hero h1{
+  font-size:64px;
+  font-family:'Playfair Display',serif;
+}
+
+.hero p{
+  margin-top:15px;
+  color:#bbb;
+  font-size:18px;
+}
+
+.btn{
+  margin-top:30px;
+  display:inline-block;
+  padding:14px 32px;
+  background:linear-gradient(135deg,#d4af37,#b8962e);
+  color:#000;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.06);
+}
+
+/* SECTION */
+.section{
+  padding:90px 60px;
+}
+
+.section h2{
+  font-family:'Playfair Display',serif;
+  margin-bottom:25px;
+  font-size:32px;
+}
+
+/* ABOUT */
+.about p{
+  max-width:650px;
+  color:#aaa;
+  line-height:1.8;
+}
+
+/* STATS */
+.stats{
+  display:flex;
+  gap:30px;
+  margin-top:40px;
+}
+
+.stat{
+  flex:1;
+  padding:30px;
+  background:rgba(255,255,255,0.03);
+  border-radius:16px;
+  backdrop-filter:blur(10px);
+  text-align:center;
+  transition:0.3s;
+}
+
+.stat:hover{
+  transform:translateY(-5px);
+}
+
+.stat h3{
+  color:#d4af37;
+  font-size:32px;
+}
+
+/* PROPERTIES */
+.property{
+  display:flex;
+  justify-content:space-between;
+  padding:22px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  transition:0.3s;
+}
+
+.property:hover{
+  background:rgba(255,255,255,0.04);
+  transform:translateX(8px);
+}
+
+.price{
+  color:#d4af37;
+  font-weight:600;
+}
+
+/* CONTACT */
+input{
+  width:100%;
+  padding:14px;
+  margin:10px 0;
+  background:#111;
+  border:1px solid #333;
+  color:#fff;
+  border-radius:8px;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  background:#d4af37;
+  border:none;
+  color:#000;
+  border-radius:8px;
+  font-weight:600;
+}
+
+.success{
+  display:none;
+  color:lightgreen;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px;
+  border-top:1px solid rgba(255,255,255,0.08);
+  color:#777;
+}
+
+/* FLOAT BUTTONS */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:15px;
+  border-radius:50%;
+  color:#fff;
+}
+
+.linkedin{
+  position:fixed;
+  bottom:90px;
+  right:20px;
+  background:#0077b5;
+  padding:15px;
+  border-radius:50%;
+  color:#fff;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  nav{padding:15px 20px;}
+  .hero{padding:0 20px;}
+  .hero h1{font-size:38px;}
+  .section{padding:60px 20px;}
+  .stats{flex-direction:column;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>Paul Properties</h2>
+  <div>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#properties">Properties</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <h1>Luxury Rentals.<br>No Brokerage.</h1>
+    <p>Direct owner listings in Jamshedpur</p>
+    <a href="#properties" class="btn">Explore</a>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <h2>About</h2>
+  <p>
+    Paul Properties offers premium residential and commercial rentals across Dimna Road and Sakchi.
+    Built on trust and transparency, every listing is directly managed by the owner with zero brokerage.
+  </p>
+
+  <div class="stats">
+    <div class="stat">
+      <h3>4+</h3>
+      <p>Properties</p>
+    </div>
+    <div class="stat">
+      <h3>100%</h3>
+      <p>Occupied</p>
+    </div>
+    <div class="stat">
+      <h3>0₹</h3>
+      <p>Brokerage</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="properties">
+  <h2>Properties</h2>
+
+  <div class="property">
+    <span>3BHK · Dimna Road</span>
+    <span class="price">₹15,000</span>
+  </div>
+
+  <div class="property">
+    <span>2BHK · Sakchi</span>
+    <span class="price">₹12,000</span>
+  </div>
+
+  <div class="property">
+    <span>1BHK · Dimna Road</span>
+    <span class="price">₹8,000</span>
+  </div>
+
+  <div class="property">
+    <span>Commercial Shop · Sanjay Market</span>
+    <span class="price">₹15,000</span>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact</h2>
+
+  <form id="f">
+    <input type="text" placeholder="Name" required>
+    <input type="tel" placeholder="Phone" required>
+    <button>Submit</button>
+  </form>
+
+  <p class="success" id="msg">Submitted!</p>
+</section>
+
+<footer>
+  <p style="color:#d4af37;">Paul Properties</p>
+  <p>📞 6287113334</p>
+  <p>
+    <a href="https://www.linkedin.com/in/siddhartha-shekhar-52a614313" target="_blank" style="color:#d4af37;">
+      View LinkedIn Profile
+    </a>
+  </p>
+</footer>
+
+<a href="https://wa.me/916287113334" class="whatsapp">W</a>
+<a href="https://www.linkedin.com/in/siddhartha-shekhar-52a614313" target="_blank" class="linkedin">in</a>
+
+<script>
+const f=document.getElementById("f");
+const msg=document.getElementById("msg");
+
+f.addEventListener("submit",e=>{
+  e.preventDefault();
+  msg.style.display="block";
+  f.reset();
+});
+</script>
+
+</body>
+</html>
